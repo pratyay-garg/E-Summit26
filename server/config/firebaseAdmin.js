@@ -1,13 +1,12 @@
 const admin = require("firebase-admin");
 const path = require("path");
 
-// Your Firebase admin SDK JSON file
-const serviceAccount = require(path.resolve("./firebase-admin.json"));
+const serviceAccount = require(path.join(__dirname, "service-account.json"));
 
 admin.initializeApp({
-  credential: admin.credential.cert(serviceAccount)
+  credential: admin.credential.cert(serviceAccount),
+  databaseURL: `https://${serviceAccount.project_id}.firebaseio.com`
 });
 
 const db = admin.firestore();
-
 module.exports = { admin, db };
