@@ -32,9 +32,9 @@ const StatsSection = () => {
         <div className="relative z-10 flex flex-col md:flex-row gap-12 md:gap-24 items-center">
 
           {[
-  { value: "1000+", label: "ATTENDEES" },
-  { value: "100+", label: "STARTUPS" },
-  { value: "25+", label: "COMPETITION EVENTS" },
+  { value: "1000 +", label: "ATTENDEES" },
+  { value: "100 +", label: "STARTUPS" },
+  { value: "25 +", label: "COMPETITION EVENTS" },
 ].map((item, i) => (
   <div
     key={i}
