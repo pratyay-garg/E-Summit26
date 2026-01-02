@@ -44,10 +44,10 @@ const Page = () => {
     }
   }, []);
   return (
-    <div className="overflow-x-hidden w-full">
+    <div className="overflow-x-hidden w-full ">
       {/* banner  */}
       <div className={`flex flex-col justify-center items-center ${styles.background}`}>
-        <section className="flex h-[90vh] justify-center items-center w-full">
+        <section className="flex h-[75vh] justify-center items-center w-full">
           <img className="translate-y-10 " ref={fadeRef} src="/home/banner-logo.png" alt="banner-logo" width={1000} height={500} />
         </section>
         <ArrowDown className="text-white animate-bounce" />
@@ -57,7 +57,7 @@ const Page = () => {
       <div className={`w-full ${styles.background2} bg-black`}>
 
         {/* about  */}
-        <section className="w-full px-6 md:px-16 py-16">
+        {/* <section className="w-full px-6 md:px-16 py-16">
           <div className="flex flex-col lg:flex-row gap-10 items-start ">
 
 
@@ -74,19 +74,99 @@ const Page = () => {
               </p>
             </div>
 
-            <div className="flex gap-0 w-full justify-end">
-              {/* <div className="bg-gray-400/80 w-[180px] translate-y-[50px] h-[448px] rounded-xl " > */}
-              <img src="/home/card.png" className="w-[200px]  translate-y-[50px] h-[448px]" />
-              {/* </div> */}
-              <img src="/home/card.png" className="w-[200px]  h-[448px]" />
-              <img src="/home/card.png" className="w-[200px]  translate-y-[50px] h-[448px]" />
-              <img src="/home/card.png" className="w-[200px]  h-[448px]" />
+
+
+          </div>
+        </section> */}
+
+
+        <section className="w-full max-w-[1300px] hidden md:flex px-4 md:px-16 py-16  flex-col mx-auto">
+
+          {/* TOP ROW */}
+          <div className="w-full grid grid-cols-1 md:grid-cols-2 items-center gap-4">
+
+            {/* RIGHT BADGE */}
+            <div className="flex md:justify-start h-full w-fit py-4 px-10  bg-[#352A17] rounded-t-2xl border-r-3 border-t-3 border-l-3 border-white">
+              <div className={`bg-[#b0944b] text-white px-10 py-2 rounded-full text-2xl md:text-2xl font-bold tracking-widest uppercase ${styles.chopsicText}`}>
+                <h2 >About Us</h2>
+              </div>
+
             </div>
 
+          </div>
+          <div className='relative  w-full p-5 bg-[#352A17] rounded-b-2xl rounded-r-2xl border-b-3 border-t-3 border-l-3 border-r-3 border-white'>
+            <div className="absolute -top-[3px] left-0 h-1.5 w-[324px] bg-[#352A17] z-20"></div>
+
+            {/* DESCRIPTION */}
+            <p className=" text-sm md:text-xl leading-relaxed tracking-wide text-white ">
+              E-Summit 2025, the flagship entrepreneurial event of IIT Patna,
+                is a vibrant platform that brings together innovators, investors,
+                startups, and industry leaders to foster entrepreneurship and
+                business growth.
+            </p>
+          </div>
+
+        </section>
+
+          {/* MOBILE VIEW */}
+        <section className="md:hidden w-full px-4 py-10 bg-[#352A17] border border-white rounded-2xl flex flex-col items-center gap-4">
+
+
+          {/* CREATIVITY MEETS CAPITAL */}
+          <div
+            className={`bg-[#b0944b] text-white w-fit px-4 py-3 rounded-xl flex flex-col items-start ${styles.chopsicText}`}
+          >
+            <span className="text-sm font-bold tracking-widest uppercase">
+              About Us
+            </span>
+          </div>
+
+          {/* DESCRIPTION */}
+          <p className="text-sm leading-relaxed tracking-wide text-white">
+            E-Summit 2025, the flagship entrepreneurial event of IIT Patna,
+                is a vibrant platform that brings together innovators, investors,
+                startups, and industry leaders to foster entrepreneurship and
+                business growth.
+          </p>
+
+        </section>
+
+
+
+        <section className="w-full flex justify-center overflow-hidden md:overflow-visible py-10">
+          <div
+            className="
+      flex
+      gap-0
+      w-max
+      translate-x-[-120px] md:translate-x-0
+    "
+          >
+            <img
+              src="/home/card.png"
+              className="w-40 md:w-[200px] h-[360px] md:h-[448px] translate-y-10"
+              alt=""
+            />
+            <img
+              src="/home/card.png"
+              className="w-40 md:w-[200px] h-[360px] md:h-[448px] z-20"
+              alt=""
+            />
+            <img
+              src="/home/card.png"
+              className="w-40 md:w-[200px] h-[360px] md:h-[448px] translate-y-10"
+              alt=""
+            />
+            <img
+              src="/home/card.png"
+              className="w-40 md:w-[200px] h-[360px] md:h-[448px]"
+              alt=""
+            />
           </div>
         </section>
 
 
+        {/* 
         <section className="w-full px-6 md:px-16 py-20 flex gap-5">
           <div>
             <img className="translate-y-10 " ref={fadeRef} src="/home/banner-logo.png" alt="banner-logo" width={500} height={500} />
@@ -106,8 +186,94 @@ const Page = () => {
             </p>
 
           </div>
+        </section> */}
+
+        <section className="w-full max-w-[1300px] hidden md:flex px-4 md:px-16 py-16  flex-col mx-auto">
+
+          {/* TOP ROW */}
+          <div className="w-full grid grid-cols-1 md:grid-cols-2 items-center gap-4">
+
+            {/* LEFT TEXT */}
+            <div className="flex flex-col ">
+              <span className={`text-lg md:text-base text-white tracking-widest font-semibold uppercase ${styles.stepsText}`}>
+                IITP’s
+              </span>
+              <span className={`text-2xl md:text-4xl text-white font-bold tracking-widest uppercase ${styles.chopsicText}`}>
+                E Summit’26
+              </span>
+            </div>
+
+            {/* RIGHT BADGE */}
+            <div className="flex md:justify-center h-full p-2   bg-[#352A17] rounded-t-2xl border-r-3 border-t-3 border-l-3 border-white">
+              <div className={`bg-[#b0944b] text-white px-10 py-2 rounded-full text-2xl md:text-2xl font-bold tracking-widest uppercase ${styles.chopsicText}`}>
+                <h2 >E-Summit’26: Where</h2>
+                <h2>Creativity <span className='text-[#352A17]'>Meets</span> Capital</h2>
+              </div>
+
+            </div>
+
+          </div>
+          <div className='relative  w-full p-5 bg-[#352A17] rounded-b-2xl rounded-l-2xl border-b-3 border-t-3 border-l-3 border-r-3 border-white'>
+            <div className="absolute -top-[3px] right-0 h-1.5 w-[573px] bg-[#352A17] z-20"></div>
+
+            {/* DESCRIPTION */}
+            <p className=" text-sm md:text-xl leading-relaxed tracking-wide text-white ">
+              In the world of entrepreneurship, great ideas need more than just vision —
+              they need the right support to grow. The theme of E-Summit 2026,
+              “Where Creativity Meets Capital”, embodies the fusion of innovation and
+              investment, highlighting how groundbreaking ideas flourish when paired
+              with strategic funding.
+            </p>
+          </div>
+
         </section>
-      <StatsSection/>
+
+        {/* MOBILE VIEW */}
+        <section className="md:hidden w-full px-4 py-10 bg-[#352A17] border border-white rounded-2xl flex flex-col gap-4">
+
+          {/* IITP + E SUMMIT */}
+          <div className="flex flex-col">
+            <span
+              className={`text-sm text-white tracking-widest font-semibold uppercase ${styles.stepsText}`}
+            >
+              IITP’s
+            </span>
+            <span
+              className={`text-2xl text-white font-bold tracking-widest uppercase ${styles.chopsicText}`}
+            >
+              E Summit’26
+            </span>
+          </div>
+
+          {/* CREATIVITY MEETS CAPITAL */}
+          <div
+            className={`bg-[#b0944b] text-white px-4 py-3 rounded-xl flex flex-col items-start ${styles.chopsicText}`}
+          >
+            <span className="text-sm font-bold tracking-widest uppercase">
+              E-Summit’26 : Where
+            </span>
+            <span className="text-sm font-bold tracking-widest uppercase">
+              Creativity{" "}
+              <span className="text-[#352A17]">Meets</span>{" "}
+              Capital
+            </span>
+          </div>
+
+          {/* DESCRIPTION */}
+          <p className="text-sm leading-relaxed tracking-wide text-white">
+            In the world of entrepreneurship, great ideas need more than just vision —
+            they need the right support to grow. The theme of E-Summit 2026,
+            “Where Creativity Meets Capital”, embodies the fusion of innovation and
+            investment, highlighting how groundbreaking ideas flourish when paired
+            with strategic funding.
+          </p>
+
+        </section>
+
+
+
+
+        <StatsSection />
       </div>
 
 
