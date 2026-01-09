@@ -1,4 +1,29 @@
 import styles from './Speakers.module.css';
+import { Linkedin, Twitter } from 'lucide-react';
+
+const speakers = [
+  {
+    id: 1,
+    name: "Amit Lodha",
+    image: "/images/amit.jpg", 
+    linkedin: "https://linkedin.com/in/username",
+    twitter: "https://x.com/username"
+  },
+  {
+    id: 2,
+    name: "Dr. Tanu Jain",
+    image: "/images/tanujain.jpeg",
+    linkedin: "https://linkedin.com/in/username",
+    twitter: "https://x.com/username"
+  },
+  {
+    id: 3,
+    name: "Sandeep Jain",
+    image: "/images/SandeepJain.jpeg",
+    linkedin: "https://linkedin.com/in/username",
+    twitter: "https://x.com/username"
+  }
+];
 
 export default function PastSpeakersSection() {
   return (
@@ -26,23 +51,37 @@ export default function PastSpeakersSection() {
             </div>
       
            <div className={styles.speakerCards}>
-            <Card />
-            <Card />
-            <Card />
+            {speakers.map((speaker) => (
+          <Card key={speaker.id} data={speaker} />
+        ))}
           </div>
       
       </section>
   );
 }
 
-function Card(){
+function Card({ data }){
    return (
    <div className={styles.card}>
-     <img
-           src="/images/card.png"
-           alt="Speaker"
-            className={styles.speakerImage}
-         />
+
+      <div className={styles.imageContainer}>
+        <img src={data.image} alt={data.name} className={data.speakerImage} />
+      </div>
+
+    
+      <div className={styles.nameBox}>
+        <span className={styles.nameText}>{data.name}</span>
+      </div>
+
+     
+      <div className={styles.socials}>
+        <a href={data.linkedin} target="_blank" rel="noopener noreferrer" className={styles.socialLink}>
+          <Linkedin size={20} color="#0077b5" />
+        </a>
+        <a href={data.twitter} target="_blank" rel="noopener noreferrer" className={styles.socialLink}>
+          <Twitter size={20} color="#fff" />
+        </a>
+      </div>
        </div>
 
   );
