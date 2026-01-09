@@ -6,22 +6,22 @@ const speakers = [
     id: 1,
     name: "Amit Lodha",
     image: "/images/amit.jpg", 
-    linkedin: "https://linkedin.com/in/username",
-    twitter: "https://x.com/username"
+    linkedin: "https://www.linkedin.com/in/amit-lodha-07452776/",
+    twitter: "https://x.com/Ipsamitlodha7"
   },
   {
     id: 2,
     name: "Dr. Tanu Jain",
     image: "/images/tanujain.jpeg",
-    linkedin: "https://linkedin.com/in/username",
-    twitter: "https://x.com/username"
+    linkedin: "https://www.linkedin.com/in/dr-tanu-jain-4aa28a131/",
+    twitter: "https://x.com/DrTanuJain1"
   },
   {
     id: 3,
     name: "Sandeep Jain",
     image: "/images/SandeepJain.jpeg",
-    linkedin: "https://linkedin.com/in/username",
-    twitter: "https://x.com/username"
+    linkedin: "https://www.linkedin.com/in/sandeep-jain-/",
+    twitter: "https://x.com/sandeep_jain"
   }
 ];
 
